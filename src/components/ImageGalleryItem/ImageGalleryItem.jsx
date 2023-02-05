@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './imageGalleryItem.module.css';
+import { memo } from 'react';
 
 const ImageGalleryItem = ({
   webformatURL,
@@ -23,7 +24,7 @@ const ImageGalleryItem = ({
   );
 };
 
-export default ImageGalleryItem;
+export default memo(ImageGalleryItem);
 
 ImageGalleryItem.propTypes = {
   webformatURL: PropTypes.string.isRequired,

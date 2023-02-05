@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './imageGallery.module.css';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
+import { memo } from 'react';
 
 const ImageGallery = ({ items, takeLargeImage }) => {
   return (
@@ -18,7 +19,7 @@ const ImageGallery = ({ items, takeLargeImage }) => {
   );
 };
 
-export default ImageGallery;
+export default memo(ImageGallery);
 
 ImageGallery.propTypes = {
   takeLargeImage: PropTypes.func.isRequired,
